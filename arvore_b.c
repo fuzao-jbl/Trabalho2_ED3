@@ -72,6 +72,15 @@ void le_no_indice(FILE *arquivo, int rrn, No_indice *no)
     fread(&no->filho[4], sizeof(int), 1, arquivo);
 }
 
+// le o cabecalho
+void le_cabecalho_indice(FILE *arquivo, Cabecalho_indice *cabecalho)
+{
+    fseek(arquivo, 0, SEEK_SET);
+    fread(&cabecalho->status, sizeof(char), 1, arquivo);
+    fread(&cabecalho->noRaiz, sizeof(int), 1, arquivo);
+    fread(&cabecalho->RRNproxNo, sizeof(int), 1, arquivo);
+}
+
 // vai separar no em dois 
 void separa_no_indice(FILE *arquivo, long chave_nova, long referencia_nova, int filho_novo, No_indice *no, long *chave, long *referencia, int *filho, No_indice *novo_no, Cabecalho_indice *cabecalho)
 {

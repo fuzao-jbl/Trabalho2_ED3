@@ -155,7 +155,7 @@ void create_index(FILE *arquivo_dados)
     // como o cabecalho vai ser alterado a medida que inserimos
     // novos nos, ele vai ser escrito apenas no final da 
     // funcionalidade
-    FILE *arquivo_indice = fopen(nome_indice, "r+");
+    FILE *arquivo_indice = fopen(nome_indice, "w+");
     Cabecalho_indice *cabecalho = cria_cabecalho_indice();
 
     // primeiro abrimos o arquivo e contamos o numero de registros

@@ -16,6 +16,8 @@
 #define PROMOCAO 1
 #define SEM_PROMOCAO 0
 #define ERRO -1
+#define ENCONTROU 1
+#define NAO_ENCONTROU 0
 
 // representa o cabecalho do arquivo com o indice arvore b
 typedef struct 
@@ -47,6 +49,9 @@ void escreve_no_indice(FILE *arquivo, No_indice *no);
 
 // le no a partir de um rrn
 void le_no_indice(FILE *arquivo, int rrn, No_indice *no);
+
+// le o cabecalho
+void le_cabecalho_indice(FILE *arquivo, Cabecalho_indice *cabecalho);
 
 // cria no ja inicializado
 No_indice *cria_no_indice(Cabecalho_indice *cabecalho);

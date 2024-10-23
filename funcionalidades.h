@@ -16,7 +16,5 @@ void select_where(FILE* arquivo);
 void remocao_logica(FILE *arquivo);
 // representa a funcionalidade (7) do trabalho
 void create_index(FILE *arquivo);
-// representa a funcionalidade (8) do trabalho
-void buca_nome(FILE *arquivo);
 
 #endif
